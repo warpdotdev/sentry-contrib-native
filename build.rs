@@ -53,6 +53,9 @@ fn main() {
                 .expect("handler doesn't have a file name"),
         );
 
+        // Make sure we re-copy the file to the desired output directory if it
+        // gets deleted.
+        println!("cargo:rerun-if-changed={}", bin_path.display());
         fs::copy(&handler, &bin_path).expect("failed to copy sentry crash handler");
     }
 }
