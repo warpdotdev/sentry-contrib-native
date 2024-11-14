@@ -516,7 +516,7 @@ pub fn set_transaction<S: Into<String>>(transaction: S) {
 /// remove_transaction();
 /// ```
 pub fn remove_transaction() {
-    unsafe { sys::remove_transaction() }
+    unsafe { sys::set_transaction(ptr::null()) }
 }
 
 /// Sets the event level.

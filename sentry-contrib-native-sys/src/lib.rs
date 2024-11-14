@@ -813,10 +813,6 @@ extern "C" {
     #[link_name = "sentry_set_transaction"]
     pub fn set_transaction(transaction: *const c_char);
 
-    /// Removes the transaction.
-    #[link_name = "sentry_remove_transaction"]
-    pub fn remove_transaction();
-
     /// Sets the event level.
     #[link_name = "sentry_set_level"]
     pub fn set_level(level: i32);
