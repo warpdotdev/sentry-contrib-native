@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write # actions/checkout reads the repo; github-pages-deploy-action pushes the built docs to the gh-pages branch
+
 jobs:
   documentation:
     runs-on: ubuntu-latest
